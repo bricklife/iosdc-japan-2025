@@ -1,3 +1,5 @@
+// Based on https://github.com/swiftlang/swift-embedded-examples/blob/main/rpi-4b-blink/Sources/Application/Application.swift
+
 import Support
 import _Volatile
 

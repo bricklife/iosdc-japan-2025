@@ -1,3 +1,5 @@
+// Based on https://github.com/babbleberry/rpi4-osdev/blob/master/part4-miniuart/io.c
+
 let AUX_BASE        = PERIPHERAL_BASE + 0x215000
 let AUX_ENABLES     = AUX_BASE + 0x04
 let AUX_MU_IO_REG   = AUX_BASE + 0x40

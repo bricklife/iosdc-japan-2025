@@ -1,3 +1,5 @@
+// Based on https://github.com/babbleberry/rpi4-osdev/blob/master/part5-framebuffer/fb.c
+
 enum Video {
   static func getFramebuffer() -> Framebuffer? {
     var mail = InlineArray<36, UInt32>(repeating: 0)

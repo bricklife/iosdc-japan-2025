@@ -1,3 +1,5 @@
+// Based on https://github.com/babbleberry/rpi4-osdev/blob/master/part4-miniuart/io.c
+
 let PERIPHERAL_BASE = UInt(0xfe000000)
 
 let GPIO_BASE = PERIPHERAL_BASE + 0x200000

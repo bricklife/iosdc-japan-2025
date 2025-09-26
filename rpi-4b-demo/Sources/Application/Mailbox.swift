@@ -1,3 +1,5 @@
+// Based on https://github.com/babbleberry/rpi4-osdev/blob/master/part5-framebuffer/mb.c
+
 let VIDEOCORE_MBOX = PERIPHERAL_BASE + 0x0000B880
 let MBOX_READ      = VIDEOCORE_MBOX + 0x00
 let MBOX_POLL      = VIDEOCORE_MBOX + 0x10

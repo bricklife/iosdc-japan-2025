@@ -1,3 +1,5 @@
+// Based on https://forums.raspberrypi.com/viewtopic.php?t=251335#p1536158
+
 let RPI_PCIE_REG_BASE = UInt(0xfd500000)
 let RPI_PCIE_REG_ECAM             = RPI_PCIE_REG_BASE + 0x0
 let RPI_PCIE_REG_ID               = RPI_PCIE_REG_BASE + 0x043c
