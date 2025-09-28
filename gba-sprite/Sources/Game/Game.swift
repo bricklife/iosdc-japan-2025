@@ -62,10 +62,10 @@ struct GameMain {
 
       if isPausing { continue }
 
-      if key.contains(.up) { sprite.y -= 1 }
-      if key.contains(.down) { sprite.y += 1 }
-      if key.contains(.left) { sprite.x -= 1 }
-      if key.contains(.right) { sprite.x += 1 }
+      if key.contains(.up) { sprite.y &-= 1 }
+      if key.contains(.down) { sprite.y &+= 1 }
+      if key.contains(.left) { sprite.x &-= 1 }
+      if key.contains(.right) { sprite.x &+= 1 }
       if key.contains(.a) { sprite.charNo = 0 }
       if key.contains(.b) { sprite.charNo = 1 }
       if key.contains(.r) { sprite.paletteNo = 0 }
