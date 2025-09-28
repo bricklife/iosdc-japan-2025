@@ -32,7 +32,7 @@ Target: arm64-apple-macosx15.0
 Build config: +assertions
 ```
 
-## ゲームボーイアドバンス向けプロジェクトのビルド
+## ゲームボーイアドバンス向けプロジェクトのビルドと実行
 
 1. [gba-llvm-devkit](https://github.com/stuij/gba-llvm-devkit/releases/tag/release-v1)の`gba-llvm-devkit-1-Darwin-arm64.dmg`を任意にディレクトリに展開する
 3. 以下のコマンドを実行して、環境変数`GBA_LLVM`にそのディレクトリへのパスを設定する
@@ -40,9 +40,9 @@ Build config: +assertions
 % export GBA_LLVM=<path to>/gba-llvm-devkit-1-Darwin-arm64
 ```
 3. ビルドしたいプロジェクトのディレクトリで`make`すると`.build/release/Game.gba`にROMイメージが生成される
-4. 生成された`Game.gba`を[mGBA](https://mgba.io)などのエミュレータで開く
+4. 生成された`Game.gba`を[mGBA](https://mgba.io)などのエミュレータで開く（実機実行のやり方は割愛）
 
-## Raspberry Pi 4B向けプロジェクトのビルド
+## Raspberry Pi 4B向けプロジェクトのビルドと実行
 
 1. [Raspberry Pi Imager](https://www.raspberrypi.com/software/)をインストールする
 2. Raspberry Pi Imagerで`Raspberry Pi OS Lite (64-bit)`を選び、空のSDカードにインストールする
