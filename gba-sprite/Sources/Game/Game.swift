@@ -43,14 +43,25 @@ struct GameMain {
     oam.update(repeating: ObjectAttribute(attr0: 0x0200), count: 128)
 
     let displayControll = VolatileMappedRegister<UInt16>(unsafeBitPattern: 0x0400_0000)
-    displayControll.store(1 << 12)
+    let OBJ_ENABLE = UInt16(1 << 12)
+    displayControll.store(OBJ_ENABLE)
 
     var sprite = ObjectAttribute(x: 120 - 4, y: 80 - 4, charNo: 0, paletteNo: 0)
 
+    var isPausing = false
+    var lastKey: Key = []
     while true {
       waitForVBlank()
 
       let key = Key.poll()
+      if key.contains(.start), !lastKey.contains(.start) {
+        isPausing.toggle()
+        displayControll.store(isPausing ? 0 : OBJ_ENABLE)
+      }
+      lastKey = key
+
+      if isPausing { continue }
+
       if key.contains(.up) { sprite.y -= 1 }
       if key.contains(.down) { sprite.y += 1 }
       if key.contains(.left) { sprite.x -= 1 }
