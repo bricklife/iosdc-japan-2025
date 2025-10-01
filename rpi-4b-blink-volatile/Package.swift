@@ -11,7 +11,12 @@ let package = Package(
     .executableTarget(
       name: "Application",
       dependencies: [
-        "Support",
-      ]),
+        "Support"
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("Volatile")
+      ]
+    ),
     .target(name: "Support"),
-  ])
+  ]
+)

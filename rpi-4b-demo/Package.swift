@@ -12,6 +12,9 @@ let package = Package(
       name: "Application",
       dependencies: [
         "Support"
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("Volatile")
       ]
     ),
     .target(name: "Support"),

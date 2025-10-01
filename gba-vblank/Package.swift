@@ -15,6 +15,9 @@ let package = Package(
       name: "Game",
       dependencies: [
         "Support"
+      ],
+      swiftSettings: [
+        .enableExperimentalFeature("Volatile")
       ]
     ),
     .target(name: "Support"),
